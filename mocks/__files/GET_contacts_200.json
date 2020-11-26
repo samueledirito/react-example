@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "type": "contact",
+      "attributes": {
+        "id": "1",
+        "name": "Samuele",
+        "city": "Prato"
+      }
+    },
+    {
+      "id": "2",
+      "type": "contact",
+      "attributes": {
+        "id": "2",
+        "name": "Gabriele",
+        "city": "Firenze"
+      }
+    },
+    {
+      "id": "3",
+      "type": "contact",
+      "attributes": {
+        "id": "3",
+        "name": "Alessio",
+        "city": "Arezzo"
+      }
+    },
+    {
+      "id": "4",
+      "type": "contact",
+      "attributes": {
+        "id": "4",
+        "name": "Massimiliano",
+        "city": "Siena"
+      }
+    },
+    {
+      "id": "5",
+      "type": "contact",
+      "attributes": {
+        "id": "5",
+        "name": "Luca",
+        "city": "Livorno"
+      }
+    }
+  ]
+}

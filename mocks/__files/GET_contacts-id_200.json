@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "1",
+    "type": "contact",
+    "attributes": {
+      "id": "1",
+      "name": "Samuele",
+      "city": "Prato"
+    }
+  }
+}

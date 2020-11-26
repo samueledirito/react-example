@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/contacts"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "GET_contacts_200.json",
+    "headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "fixedDelayMilliseconds": 1000
+  }
+}
