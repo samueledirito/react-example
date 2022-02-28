@@ -17,7 +17,7 @@ describe("Async actions - contactList", () => {
     });
     await store.dispatch(getContactList());
     const { entities } = selectors.contactListSlice(store.getState());
-    expect(entities.length).toEqual(1);
+    expect(entities?.length).toEqual(1);
   });
 
   it("getContact - rejected", async () => {

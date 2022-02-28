@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getContactList, selectors } from "./ducks";
 
 const ContactListPage: React.FC = () => {
   const dispatch = useDispatch();
   const { entities = [], loading } = useSelector(selectors.contactListSlice);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getContactList());
   }, [dispatch]);
 
   const goToEditPage = (id: string) => () => {
-    history.push(`contacts/${id}`);
+    navigate(`${id}`);
   };
 
   return (

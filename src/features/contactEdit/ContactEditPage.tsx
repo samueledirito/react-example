@@ -5,12 +5,8 @@ import { useParams } from "react-router-dom";
 import { Contact } from "../types";
 import { getContact, selectors } from "./ducks";
 
-interface ContactEditParams {
-  id?: string;
-}
-
 const ContactEditPage: React.FC = () => {
-  const { id } = useParams<ContactEditParams>();
+  const { id } = useParams();
   const dispatch = useDispatch();
   const { entity, loading, error } = useSelector(selectors.contactEditSlice);
 

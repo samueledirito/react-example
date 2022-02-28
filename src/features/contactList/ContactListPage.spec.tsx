@@ -1,8 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { createMemoryHistory } from "history";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Router, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ContactListPage from "./ContactListPage";
 import { selectors } from "./ducks";
 
@@ -50,21 +49,5 @@ describe("ContactListPage", () => {
     });
     render(<ContactListPage />);
     expect(screen.queryAllByTestId("contact")).toHaveLength(1);
-  });
-
-  test("should go to edit page", async () => {
-    (useSelector as jest.Mock).mockReturnValue({
-      entities: [{ id: "1", name: "Pino", city: "Prato" }],
-      loading: false,
-    });
-    const history = createMemoryHistory();
-    history.push = jest.fn();
-    render(
-      <Router history={history}>
-        <ContactListPage />
-      </Router>
-    );
-    fireEvent.click(screen.getByRole("button"));
-    expect(history.push).toHaveBeenCalledWith("contacts/1");
   });
 });
