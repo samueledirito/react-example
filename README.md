@@ -14,6 +14,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `yarn mock`
+
+Launches the [wiremock](https://wiremock.org/docs/running-standalone/) server.\
+All mocks are located in `mocks` folder.\
+Mock server runs at port 8080.
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
