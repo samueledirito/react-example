@@ -20,7 +20,7 @@ export const getContact = createAsyncThunk(
   "getContact",
   async ({ id }: GetContactArgs) => {
     const response = await Axios.get<Contact>(
-      `http://localhost:8080/api/contacts/${id}`
+      `${process.env.REACT_APP_API}/api/contacts/${id}`
     );
     const contacts = deserialize(response.data, {
       transformKeys: "camelCase",
